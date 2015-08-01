@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Homework</title>
+		<style>
+			body {
+				width: 990px;
+				height: 420px;
+				margin: auto;
+				background-color: #282828;
+			}
+
+			#container {
+				width: 960px;
+				height: 320px;
+				border: solid 10px #669999;
+				position: relative;
+				margin: auto;
+				
+			}
+			
+			h1 {
+				text-align: center;
+				color: white;
+				font-family: Arial;
+			}
+
+			.square {
+				width: 320px;
+				height: 320px;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+			}
+
+			.rectangle {
+				width: 640px;
+				height: 320px;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+			}
+
+			.thumb1 {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+			}
+
+			.thumb2 {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				left: 75px;
+			}
+
+			.thumb3 {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				left: 155px;
+			}
+
+			.thumb4 {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				right: 1px;
+			}
+
+			.thumb5 {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				top: 85px;
+			}
+
+
+			.thumb6 {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				top: 85px;
+				left: 75px;
+			}
+
+			.thumb7 {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				top: 85px;
+				left: 155px;
+			}
+
+			.thumb8 {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				top: 85px;
+				right: 1px;
+			}
+
+			.thumb9 {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				top: 164px;
+			}
+
+			.thumb10 {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				top: 164px;
+				left: 75px;
+			}
+
+			.thumb11 {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				top: 164px;
+				left: 155px;
+			}
+
+			.thumb12 {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				top: 164px;
+				right: 1px;
+			}
+
+			.thumb13 {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				bottom: 0px;
+				left: 75px;
+			}
+
+			.thumb14 {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				bottom: 0px;
+				left: 155px;
+			}
+
+			.thumb15 {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				bottom: 0px;
+				right: 0px;
+			}
+
+			.thumb16 {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				bottom: 0px;
+			}
+
+			.large {
+				width: 640px;
+				height: 320px;
+
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Remote Swap</h1>
+
+		<div id="container">
+			<div class="square">
+				<img data-large="_imgs_lg/1_Apple.jpg"	class="thumb1"		src="_imgs/1_Apple.jpg">
+				<img data-large="_imgs_lg/2_Apple.jpg" 	class="thumb2"		src="_imgs/2_Apple.jpg">
+				<img data-large="_imgs_lg/3_Apple.jpg" 	class="thumb3"		src="_imgs/3_Apple.jpg">
+				<img data-large="_imgs_lg/4_Apple.png" 	class="thumb4"		src="_imgs/4_Apple.png">
+				<img data-large="_imgs_lg/5_Apple.jpg"	class="thumb5"		src="_imgs/5_Apple.jpg">
+				<img data-large="_imgs_lg/6_Apple.jpg"	class="thumb6"		src="_imgs/6_Apple.jpg">
+				<img data-large="_imgs_lg/7_Apple.jpg"	class="thumb7"		src="_imgs/7_Apple.jpg">
+				<img data-large="_imgs_lg/8_Apple.jpg"	class="thumb8"		src="_imgs/8_Apple.jpg">
+				<img data-large="_imgs_lg/9_Apple.png"	class="thumb9"		src="_imgs/9_Apple.png">
+				<img data-large="_imgs_lg/10_Apple.jpg"	class="thumb10"		src="_imgs/10_Apple.jpg">
+				<img data-large="_imgs_lg/11_Apple.jpg"	class="thumb11"		src="_imgs/11_Apple.jpg">
+				<img data-large="_imgs_lg/12_Apple.jpg"	class="thumb12"		src="_imgs/12_Apple.jpg">
+				<img data-large="_imgs_lg/13_Apple.jpg"	class="thumb13"		src="_imgs/13_Apple.jpg">
+				<img data-large="_imgs_lg/14_Apple.jpg"	class="thumb14"		src="_imgs/14_Apple.jpg">
+				<img data-large="_imgs_lg/15_Apple.jpg"	class="thumb15"		src="_imgs/15_Apple.jpg">
+				<img data-large="_imgs_lg/16_Apple.jpg"	class="thumb16"		src="_imgs/16_Apple.jpg">
+				
+			</div>
+
+			<div class="rectangle">
+				<img src="_imgs_lg/1_Apple.jpg" class="large">
+				
+			</div>
+
+			<script src="_js/jquery-1.11.3.min.js"></script>
+				<script>
+					function thumb_over() {
+						var newScr = $(this).attr('data-large');
+
+						$('.large').attr('src', newScr);
+					}
+
+					$('.square img').mouseover(thumb_over);
+
+				</script>
+			
+		</div>
+	</body>
+</html>
